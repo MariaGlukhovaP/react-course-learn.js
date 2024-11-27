@@ -1,10 +1,4 @@
-.counterContainer {
-  display: flex;
-  column-gap: 10px;
-  align-items: center;
-}
-
-.counterButton {
+.counter {
   color: #f8f8f8;
   font-size: 30px;
   width: 36px;
@@ -14,6 +8,12 @@
   border: none;
 }
 
-.counterButton:hover {
+.counter:hover {
   opacity: 0.8;
+}
+
+.counterContainer {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
 }

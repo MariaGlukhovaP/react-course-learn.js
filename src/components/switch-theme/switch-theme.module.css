@@ -1,0 +1,9 @@
+.switchTheme {
+  color: #f8f8f8;
+  border-radius: 3px;
+  padding: 5px 10px;
+  background-color: transparent;
+  background-color: #e18504;
+  border: 0;
+  font-weight: 600;
+}

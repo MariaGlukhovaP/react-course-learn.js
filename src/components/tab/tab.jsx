@@ -1,15 +1,14 @@
-import classNames from "classnames";
+import { Button } from "../button/button";
+
 import styles from "./tab.module.css";
 
 export const Tab = ({ title, onClick, isActive }) => {
   return (
-    <button
-      className={classNames(styles.tab, {
-        [styles.activeTab]: isActive,
-      })}
+    <Button
+      text={title}
+      buttonType={styles.tab}
       onClick={onClick}
-    >
-      {title}
-    </button>
+      isActive={isActive}
+    />
   );
 };

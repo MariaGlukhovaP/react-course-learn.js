@@ -1,3 +1,4 @@
+import { useAuth } from "../auth-context/use-auth";
 import { Card } from "../card/card";
 import { DishCounter } from "../dish-counter/dish-counter";
 import { Subtitle } from "../subtitle/subtitle";
@@ -5,6 +6,8 @@ import { Subtitle } from "../subtitle/subtitle";
 import styles from "./../cards-container/cards-container.module.css";
 
 export const Menu = ({ menu }) => {
+  const { isAuthed, user } = useAuth();
+
   return (
     <section>
       <Subtitle subtitle="Menu" />
@@ -15,7 +18,7 @@ export const Menu = ({ menu }) => {
               cardTitle={name}
               cardFirstRowItem={ingredients.join(", ")}
               cardSecondRowItem={`${price}$`}
-              cardSideItem={<DishCounter />}
+              cardSideItem={isAuthed(user) && <DishCounter />}
             />
           </li>
         ))}

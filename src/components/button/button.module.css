@@ -1,0 +1,15 @@
+.button {
+  cursor: pointer;
+}
+
+.button.active {
+  opacity: 1;
+}
+
+.button.light {
+  color: #f8f8f8;
+}
+
+.button.light {
+  color: #2a2a2a;
+}

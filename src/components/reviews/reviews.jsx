@@ -1,3 +1,4 @@
+import { useAuth } from "../auth-context/use-auth";
 import { Card } from "../card/card";
 import { ReviewForm } from "../review-form/review-form";
 import { Subtitle } from "../subtitle/subtitle";
@@ -5,6 +6,8 @@ import { Subtitle } from "../subtitle/subtitle";
 import styles from "./../cards-container/cards-container.module.css";
 
 export const Reviews = ({ reviews }) => {
+  const { isAuthed, user } = useAuth();
+
   return (
     <section>
       <Subtitle subtitle="Reviews" />
@@ -19,7 +22,7 @@ export const Reviews = ({ reviews }) => {
           </li>
         ))}
       </ul>
-      <ReviewForm />
+      {isAuthed(user) && <ReviewForm />}
     </section>
   );
 };

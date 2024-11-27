@@ -1,5 +1,5 @@
 .formTitle {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .formSectionContainer {
@@ -37,7 +37,7 @@
   height: 100px;
 }
 
-.submitButton {
+.submit {
   background-color: transparent;
   border: 2px solid #e18504;
   color: #e18504;
@@ -49,11 +49,11 @@
   transition: transform 0.3s;
 }
 
-.submitButton:hover {
+.submit:hover {
   transform: scale(1.05);
 }
 
-.submitButton:active {
+.submit:active {
   color: #f8f8f8;
   background-color: #e18504;
 }

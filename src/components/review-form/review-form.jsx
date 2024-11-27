@@ -3,6 +3,7 @@ import { useForm } from "./use-form";
 
 import styles from "./review-form.module.css";
 import classNames from "classnames";
+import { Button } from "../button/button";
 
 export const ReviewForm = () => {
   const { form, setName, setText, increase, decrease, clear } = useForm();
@@ -39,9 +40,7 @@ export const ReviewForm = () => {
           <Counter value={rating} increase={increase} decrease={decrease} />
         </div>
 
-        <button className={styles.submitButton} type="submit" onClick={clear}>
-          Publish
-        </button>
+        <Button text="Submit" buttonType={styles.submit} onClick={clear} />
       </form>
     </div>
   );
