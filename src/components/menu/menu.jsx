@@ -1,15 +1,14 @@
-import { DishContainer } from "../dish/dish-container";
-import { Subtitle } from "../subtitle/subtitle";
+import { DishTabContainer } from "../dish-tab/dish-tab-container";
+
 import styles from "./../cards-container/cards-container.module.css";
 
 export const Menu = ({ menu }) => {
   return (
-    <section>
-      <Subtitle subtitle="Menu" />
+    <section className={styles.cardsSectionContainer}>
       <ul className={styles.cardsContainer}>
-        {menu.map((dishId) => (
+        {menu?.map((dishId) => (
           <li key={dishId}>
-            <DishContainer id={dishId} />
+            <DishTabContainer id={dishId} />
           </li>
         ))}
       </ul>

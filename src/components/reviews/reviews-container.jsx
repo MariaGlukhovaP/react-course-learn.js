@@ -1,13 +1,15 @@
 import { useSelector } from "react-redux";
 import { selectRestaurantById } from "../../redux/entities/restaurants/restaurants-slice";
-import { RestaurantTab } from "./restaurant-tab";
+import { Reviews } from "./reviews";
 
-export const RestaurantTabContainer = ({ id }) => {
+export const ReviewsContainer = ({ id }) => {
   const restaurant = useSelector((state) => selectRestaurantById(state, id));
 
-  if (!restaurant) {
+  const { reviews } = restaurant;
+
+  if (!reviews) {
     return null;
   }
 
-  return <RestaurantTab title={restaurant.name} id={id} />;
+  return <Reviews reviews={reviews} />;
 };

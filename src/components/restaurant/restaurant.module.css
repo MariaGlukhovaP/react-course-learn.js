@@ -1,3 +1,5 @@
+@import url("./../../global-colors.css");
+
 .restaurantContainer {
   display: flex;
   flex-direction: column;
@@ -8,8 +10,18 @@
   margin-bottom: 30px;
 }
 
-.cardsSections {
+.reataurantTabs {
   display: flex;
-  flex-direction: column;
-  row-gap: 50px;
+  flex-direction: row;
+  column-gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--dark-secondary-color);
+  opacity: 0.8;
+}
+
+.activeLink {
+  opacity: 1;
 }

@@ -1,15 +1,13 @@
-import { Description } from "../description/description";
+import { Cart } from "../cart/cart";
 import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
-import { ProgressBar } from "../progress-bar/progress-bar";
 
 export const Layout = ({ children }) => {
   return (
     <div>
-      <ProgressBar />
       <Header />
-      <Description />
       {children}
+      <Cart />
       <Footer />
     </div>
   );

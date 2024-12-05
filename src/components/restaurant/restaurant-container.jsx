@@ -7,7 +7,7 @@ export const RestaurantContainer = ({ id }) => {
 
   if (!restaurant) return null;
 
-  const { name, menu, reviews } = restaurant;
+  const { name } = restaurant;
 
-  return <Restaurant name={name} menu={menu} reviews={reviews} />;
+  return <Restaurant name={name} id={id} />;
 };

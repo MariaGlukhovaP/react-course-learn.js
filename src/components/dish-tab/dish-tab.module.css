@@ -1,0 +1,7 @@
+@import url("./../../global-colors.css");
+
+.link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+}

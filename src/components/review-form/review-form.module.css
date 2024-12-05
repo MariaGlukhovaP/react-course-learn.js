@@ -1,5 +1,16 @@
 @import url("./../../global-colors.css");
 
+.formSectionContainer {
+  margin-top: 40px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: flex-start;
+}
+
 .formTitle {
   margin-bottom: 10px;
 }
@@ -8,13 +19,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 7px;
-}
-
-.formContainer {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  align-items: flex-start;
 }
 
 .inputTitle {
