@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Description } from "../description/description";
+import { Description } from "../../components/description/description";
 import styles from "./home-page.module.css";
 
 export const HomePage = () => {

@@ -6,7 +6,7 @@ export const Review = ({ userId, text, rating }) => {
   return (
     <Card
       cardTitle={text}
-      cardFirstRowItem={<UserContainer id={userId} />}
+      cardFirstRowItem={<UserContainer userId={userId} />}
       cardSideItem={`${rating} ★`}
     />
   );

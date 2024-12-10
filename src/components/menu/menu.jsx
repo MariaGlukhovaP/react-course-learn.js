@@ -8,7 +8,7 @@ export const Menu = ({ menu }) => {
       <ul className={styles.cardsContainer}>
         {menu?.map((dishId) => (
           <li key={dishId}>
-            <DishTabContainer id={dishId} />
+            <DishTabContainer dishId={dishId} />
           </li>
         ))}
       </ul>

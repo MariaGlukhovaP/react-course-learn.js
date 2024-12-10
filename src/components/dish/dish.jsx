@@ -2,7 +2,7 @@ import { useAuth } from "../auth-context/use-auth";
 import { Card } from "../card/card";
 import { DishCounter } from "../dish-counter/dish-counter";
 
-export const Dish = ({ name, ingredients, price, id }) => {
+export const Dish = ({ name, ingredients, price, dishId }) => {
   const { auth } = useAuth();
 
   return (
@@ -10,7 +10,7 @@ export const Dish = ({ name, ingredients, price, id }) => {
       cardTitle={name}
       cardFirstRowItem={ingredients.join(", ")}
       cardSecondRowItem={`${price}$`}
-      cardSideItem={auth.isAuthorized && <DishCounter id={id} />}
+      cardSideItem={auth.isAuthorized && <DishCounter dishId={dishId} />}
     />
   );
 };

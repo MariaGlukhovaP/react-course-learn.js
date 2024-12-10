@@ -6,14 +6,14 @@ import {
   selectCartItemAmountById,
 } from "../../redux/UI/cart/cart-slice";
 
-export const DishCounter = ({ id }) => {
+export const DishCounter = ({ dishId }) => {
   const dispatch = useDispatch();
 
   const amount =
-    useSelector((state) => selectCartItemAmountById(state, id)) || 0;
+    useSelector((state) => selectCartItemAmountById(state, dishId)) || 0;
 
-  const increase = () => dispatch(addToCart(id));
-  const decrease = () => dispatch(removeFromCart(id));
+  const increase = () => dispatch(addToCart(dishId));
+  const decrease = () => dispatch(removeFromCart(dishId));
 
   return <Counter increase={increase} decrease={decrease} value={amount} />;
 };

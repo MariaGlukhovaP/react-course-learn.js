@@ -1,16 +1,20 @@
 import { Layout } from "./components/layout/layout";
-import { RestaurantsPage } from "./components/restaurants-page/restaurants-page";
 import "./app.css";
 import { AuthContextProvider } from "./components/auth-context/auth-context";
 import { ThemeContextProvider } from "./components/theme-context/theme-context";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
-import { HomePage } from "./components/home-page/home-page";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { RestaurantPage } from "./components/restaurant-page/restaurant-page";
-import { MenuPage } from "./components/menu-page/menu-page";
-import { ReviewsPage } from "./components/reviews-page/reviews-page";
-import { DishPage } from "./components/dish-page/dish-page";
+import { HomePage } from "./pages/home-page/home-page";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
+import { RestaurantsPage } from "./pages/restaurants-page/restaurants-page";
+import { RestaurantPage } from "./pages/restaurant-page/restaurant-page";
+import { MenuPage } from "./pages/menu-page/menu-page";
+import { ReviewsPage } from "./pages/reviews-page/reviews-page";
+import { DishPage } from "./pages/dish-page/dish-page";
 
 const router = createBrowserRouter([
   {
@@ -26,9 +30,10 @@ const router = createBrowserRouter([
         element: <RestaurantsPage />,
         children: [
           {
-            path: "restaurant/:restaurantId",
+            path: ":restaurantId",
             element: <RestaurantPage />,
             children: [
+              { index: true, element: <Navigate to="menu" /> },
               {
                 path: "menu",
                 element: <MenuPage />,

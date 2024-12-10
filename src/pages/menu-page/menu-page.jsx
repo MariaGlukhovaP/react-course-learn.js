@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import { MenuContainer } from "../menu/menu-container";
+import { MenuContainer } from "../../components/menu/menu-container";
 
 export const MenuPage = () => {
   const { restaurantId } = useParams();
 
   return (
     <div>
-      <MenuContainer id={restaurantId} />
+      <MenuContainer restaurantId={restaurantId} />
     </div>
   );
 };
