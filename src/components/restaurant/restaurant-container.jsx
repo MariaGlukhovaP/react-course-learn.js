@@ -1,15 +1,8 @@
-"use client";
-
-import { useGetRestaurantsQuery } from "../../redux/services/api";
+import { getRestaurant } from "../../services/get-restaurant-by-id";
 import { Restaurant } from "./restaurant";
 
-export const RestaurantContainer = ({ restaurantId }) => {
-  const { data: restaurant } = useGetRestaurantsQuery(undefined, {
-    selectFromResult: (result) => ({
-      ...result,
-      data: result?.data?.find(({ id }) => id === restaurantId),
-    }),
-  });
+export const RestaurantContainer = async ({ restaurantId }) => {
+  const restaurant = await getRestaurant(restaurantId);
 
   if (!restaurant) return null;
 

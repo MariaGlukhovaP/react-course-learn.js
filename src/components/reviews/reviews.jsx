@@ -4,7 +4,7 @@ import { Review } from "../review/review";
 
 import styles from "./../cards-container/cards-container.module.css";
 
-export const Reviews = ({ reviews, onAddReview }) => {
+export const Reviews = ({ reviews, restaurantId }) => {
   const { auth } = useAuth();
 
   const { isAuthorized, id } = auth;
@@ -18,7 +18,7 @@ export const Reviews = ({ reviews, onAddReview }) => {
           </li>
         ))}
       </ul>
-      {isAuthorized && <ReviewForm onAddReview={onAddReview} userId={id} />}
+      {isAuthorized && <ReviewForm userId={id} restaurantId={restaurantId} />}
     </section>
   );
 };

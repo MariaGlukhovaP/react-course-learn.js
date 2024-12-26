@@ -1,4 +1,4 @@
-import { RestaurantContainer } from "../../components/restaurant/restaurant-container";
+import { RestaurantContainer } from "../restaurant/restaurant-container";
 
 export const RestaurantLayout = async ({ params, children }) => {
   const { restaurantId } = await params;

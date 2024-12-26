@@ -1,11 +1,12 @@
 import { Counter } from "../counter/counter";
 import { useForm } from "./use-form";
-
-import styles from "./review-form.module.css";
 import classNames from "classnames";
 import { Button } from "../button/button";
+import { addReview } from "../../services/add-review";
 
-export const ReviewForm = ({ onAddReview, userId }) => {
+import styles from "./review-form.module.css";
+
+export const ReviewForm = ({ userId, restaurantId }) => {
   const { form, setText, increase, decrease, clear } = useForm();
   const { text, rating } = form;
 
@@ -33,7 +34,7 @@ export const ReviewForm = ({ onAddReview, userId }) => {
         <Button
           text="Submit"
           buttonType={styles.submit}
-          onClick={() => onAddReview({ text, rating, userId })}
+          onClick={() => addReview(restaurantId, { text, rating, userId })}
         />
         <Button text="Clear" buttonType={styles.submit} onClick={clear} />
       </form>

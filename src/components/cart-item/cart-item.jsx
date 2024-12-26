@@ -1,10 +1,10 @@
+import { getDish } from "../../services/get-dish-by-id";
 import { DishCounter } from "../dish-counter/dish-counter";
 
 import styles from "./cart-item.module.css";
-import { useGetDishByIdQuery } from "../../redux/services/api";
 
 export const CartItem = ({ id }) => {
-  const { data } = useGetDishByIdQuery(id);
+  const data = getDish(id);
 
   if (!data) {
     return null;

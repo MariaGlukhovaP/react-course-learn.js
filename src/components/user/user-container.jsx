@@ -1,13 +1,10 @@
 import { User } from "./user";
-import { useGetUsersQuery } from "../../redux/services/api";
+import { getUsers } from "../../services/get-users";
 
-export const UserContainer = ({ userId }) => {
-  const { data: user } = useGetUsersQuery(undefined, {
-    selectFromResult: (result) => ({
-      ...result,
-      data: result?.data?.find(({ id }) => id === userId),
-    }),
-  });
+export const UserContainer = async ({ userId }) => {
+  const users = await getUsers();
+
+  const user = users.find(({ id }) => id === userId);
 
   if (!user?.name) return null;
 

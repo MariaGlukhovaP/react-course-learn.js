@@ -1,3 +1,3 @@
-import { DishPage } from "../../../pages/dish-page/dish-page";
+import { DishPageContainer } from "../../../components/pages/dish-page/dish-page-container";
 
-export default DishPage;
+export default DishPageContainer;

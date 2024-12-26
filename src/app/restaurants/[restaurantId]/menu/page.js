@@ -1,3 +1,3 @@
-import { MenuPage } from "../../../../pages/menu-page/menu-page";
+import { MenuPageContainer } from "../../../../components/pages/menu-page/menu-page-container";
 
-export default MenuPage;
+export default MenuPageContainer;

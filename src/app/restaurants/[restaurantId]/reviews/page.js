@@ -1,3 +1,3 @@
-import { ReviewsPage } from "../../../../pages/reviews-page/reviews-page";
+import { ReviewsPageContainer } from "../../../../components/pages/reviews-page/reviews-page-container";
 
-export default ReviewsPage;
+export default ReviewsPageContainer;
